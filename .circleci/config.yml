@@ -5,8 +5,8 @@ jobs:
       - image: fr3akyphantom/droid-builder:latest
     environment:
       MANIFEST_BRANCH: 'twrp-6.0'
-      PBRP_BRANCH: 'android-9.0'
-      VERSION: '2.9.1'
+      PBRP_BRANCH: '2.9.0'
+      VERSION: '2.9.0'
       VENDOR: 'WALTON'
       CODENAME: 'Primo_RX5'
       BUILD_LUNCH: 'omni_Primo_RX5-userdebug'
@@ -34,4 +34,4 @@ workflows:
           context: org-global
           filters:
             branches:
-              only: 'master'
+              only: 'legacy'
