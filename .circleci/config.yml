@@ -5,7 +5,7 @@ jobs:
       - image: fr3akyphantom/droid-builder:latest
     environment:
       MANIFEST_BRANCH: 'twrp-6.0'
-      PBRP_BRANCH: 'android-9.0'
+      PBRP_BRANCH: 'features'
       VERSION: '2.9.1'
       VENDOR: 'WALTON'
       CODENAME: 'Primo_RX5'
@@ -23,6 +23,7 @@ jobs:
             echo "Set GitAuth Infos too"
             git config --global user.email $GitHubMail
             git config --global user.name $GitHubName
+            git config --global credential.helper store
             git config --global color.ui true
             wget -q https://raw.githubusercontent.com/PitchBlackRecoveryProject/vendor_pb/pb/build.sh
             source build.sh
@@ -34,4 +35,4 @@ workflows:
           context: org-global
           filters:
             branches:
-              only: 'master'
+              only: 'test'
