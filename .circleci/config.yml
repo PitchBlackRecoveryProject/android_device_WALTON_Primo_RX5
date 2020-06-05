@@ -2,12 +2,12 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: fr3akyphantom/droid-builder:latest # Use Ubuntu Bionic for now, Focal has python2 issue
+      - image: fr3akyphantom/droid-builder:focal # Use Ubuntu Focal
     environment:
       MANIFEST_BRANCH: 'twrp-6.0'
       USE_SECRET_BOOTABLE: "yes"
       PBRP_BRANCH: 'features' # ust to test if the bypass works or not
-      # VERSION: '2.9.1' # Will fetch from pb_build.sh
+      VERSION: '2.9.1' # need to be fixed
       VENDOR: 'WALTON'
       CODENAME: 'Primo_RX5'
       BUILD_LUNCH: 'omni_Primo_RX5-userdebug'
