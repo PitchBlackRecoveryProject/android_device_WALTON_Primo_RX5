@@ -2,11 +2,12 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: fr3akyphantom/droid-builder:latest
+      - image: fr3akyphantom/droid-builder:focal # Use Ubuntu Focal 20.04 for now
     environment:
       MANIFEST_BRANCH: 'twrp-6.0'
-      PBRP_BRANCH: 'features'
-      VERSION: '2.9.1'
+      USE_SECRET_BOOTABLE: "yes"
+      PBRP_BRANCH: 'features' # ust to test if the bypass works or not
+      # VERSION: '2.9.1' # Will fetch from pb_build.sh
       VENDOR: 'WALTON'
       CODENAME: 'Primo_RX5'
       BUILD_LUNCH: 'omni_Primo_RX5-userdebug'
