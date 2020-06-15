@@ -4,8 +4,8 @@ jobs:
     docker:
       - image: fr3akyphantom/droid-builder:latest
     environment:
-      MANIFEST_BRANCH: 'twrp-6.0'
-      PBRP_BRANCH: 'android-9.0'
+      MANIFEST_BRANCH: 'android-6.0'
+      # PBRP_BRANCH: 'android-9.0'
       VERSION: '2.9.1'
       VENDOR: 'WALTON'
       CODENAME: 'Primo_RX5'
