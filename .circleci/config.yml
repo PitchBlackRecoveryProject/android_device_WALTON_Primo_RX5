@@ -5,6 +5,8 @@ jobs:
       - image: fr3akyphantom/droid-builder:edge
     environment:
       MANIFEST_BRANCH: 'android-6.0'
+      USE_SECRET_BOOTABLE: 'true'
+      SECRET_BR: 'redesign3'
       # PBRP_BRANCH: 'android-9.0'
       VERSION: '2.9.1'
       VENDOR: 'WALTON'
@@ -13,10 +15,7 @@ jobs:
       # BUILD_LUNCH: 'omni_Primo_RX5-userdebug'
       MAINTAINER: '@fr3akyphantom'
       CHANGELOG: |
-        What's changed?
-        - Nothing
-          - Just testing the script
-        - Hoping _it_ will give result okay
+        Redesign test
       TEST_BUILD: 'true'
       # Trim down PB_GO a little more
       PB_ENGLISH: 'true'
