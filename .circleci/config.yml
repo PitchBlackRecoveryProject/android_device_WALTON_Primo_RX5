@@ -5,21 +5,23 @@ jobs:
       - image: fr3akyphantom/droid-builder:edge
     environment:
       MANIFEST_BRANCH: 'android-6.0'
-      USE_SECRET_BOOTABLE: 'true'
-      SECRET_BR: 'redesign3'
-      # PBRP_BRANCH: 'android-9.0'
+      # USE_SECRET_BOOTABLE: 'true'
+      # SECRET_BR: 'redesign3'
+      PBRP_BRANCH: 'features' #'android-9.0'
       VERSION: '2.9.1'
       VENDOR: 'WALTON'
       CODENAME: 'Primo_RX5'
       FLAVOR: 'userdebug'
       MAINTAINER: '@fr3akyphantom'
       CHANGELOG: |
-        Continuous Redesign test
+        - Features bootable branch test
+        - Use HEAD vendor_pb
       TEST_BUILD: 'true'
       # Trim down PB_GO a little more
+      PB_GO: 'true' # If needed
       PB_ENGLISH: 'true'
       # PB_TORCH_PATH: '/sys/class/flashlightdrv/kd_camera_flashlight/torch'
-      EXTRA_CMD: 'rm -rf vendor/pb; git clone https://github.com/PitchBlackRecoveryProject/vendor_pb -b pb-dev vendor/pb;'
+      # EXTRA_CMD: 'rm -rf vendor/pb; git clone https://github.com/PitchBlackRecoveryProject/vendor_pb -b pb-dev vendor/pb;' # Use default pb
     working_directory: /home/builder/pitchblack
     steps:
       - run:
