@@ -2,21 +2,19 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: fr3akyphantom/droid-builder:edge
+      - image: fr3akyphantom/droid-builder:focal
     environment:
       MANIFEST_BRANCH: 'android-6.0'
-      # USE_SECRET_BOOTABLE: 'true'
-      # SECRET_BR: 'redesign3'
-      PBRP_BRANCH: 'features' #'android-9.0'
-      VERSION: '2.9.1'
+      USE_SECRET_BOOTABLE: 'true'
+      SECRET_BR: 'redesign3'
+      #PBRP_BRANCH: 'features' #'android-9.0'
+      VERSION: '2.9.2'
       VENDOR: 'WALTON'
       CODENAME: 'Primo_RX5'
       FLAVOR: 'userdebug'
       MAINTAINER: '@fr3akyphantom'
-      CHANGELOG: |
-        - Features bootable branch test
-        - Use HEAD vendor_pb
-      TEST_BUILD: 'true'
+      #CHANGELOG: ""
+      #TEST_BUILD: 'true'
       # Trim down PB_GO a little more
       PB_GO: 'true' # If needed
       PB_ENGLISH: 'true'
