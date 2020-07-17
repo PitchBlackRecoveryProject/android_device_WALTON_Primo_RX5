@@ -14,9 +14,9 @@ jobs:
       FLAVOR: 'userdebug'
       MAINTAINER: '@fr3akyphantom'
       #CHANGELOG: ""
-      #TEST_BUILD: 'true'
+      TEST_BUILD: 'true'
       # Trim down PB_GO a little more
-      PB_GO: 'true' # If needed
+      # PB_GO: 'true' # If needed
       PB_ENGLISH: 'true'
       # PB_TORCH_PATH: '/sys/class/flashlightdrv/kd_camera_flashlight/torch'
       # EXTRA_CMD: 'rm -rf vendor/pb; git clone https://github.com/PitchBlackRecoveryProject/vendor_pb -b pb-dev vendor/pb;' # Use default pb
