@@ -5,10 +5,8 @@ jobs:
       - image: fr3akyphantom/droid-builder:focal
     environment:
       MANIFEST_BRANCH: 'android-6.0'
-      USE_SECRET_BOOTABLE: 'true'
-      SECRET_BR: 'redesign3'
-      #PBRP_BRANCH: 'features' #'android-9.0'
-      VERSION: '2.9.2'
+      #PBRP_BRANCH: 'android-9.0'
+      VERSION: '3.0.0'
       VENDOR: 'WALTON'
       CODENAME: 'Primo_RX5'
       FLAVOR: 'userdebug'
@@ -25,7 +23,7 @@ jobs:
       - run:
           name: AIO Build
           command: |
-            wget -q https://raw.githubusercontent.com/PitchBlackRecoveryProject/vendor_pb/pb/build.sh
+            wget -q https://raw.githubusercontent.com/PitchBlackRecoveryProject/vendor_utils/pb/build.sh
             source build.sh
 workflows:
   version: 2
